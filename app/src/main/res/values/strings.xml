@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">SpaceX</string>
+    <string name="patch_image_content_description">Launch patch image</string>
+    <string name="connection_error_title">You are not connected to the internet.</string>
+    <string name="connection_error_message">Please connect to a wifi or cellular network.</string>
+    <string name="retry_text">Retry</string>
+    <string name="ok_text">OK</string>
+
+    <string name="companyInfoLoadingText">Loading company information…</string>
+    <string name="companyInfoTemplate">%s was founded by %s in %d. It now has %d employees, %d launch sites, and is valued at USD %s.</string>
+    <string name="failedErrorMessage">There was a problem retrieving company information.</string>
+</resources>
