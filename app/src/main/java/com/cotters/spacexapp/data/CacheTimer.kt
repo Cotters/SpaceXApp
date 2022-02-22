@@ -8,7 +8,7 @@ abstract class CacheTimer(
 ) {
 
     // TODO: Use SharedPreferences or DB to store this.
-    var lastUpdated: Long = systemClock.nowInMilliseconds()
+    var lastUpdated: Long = 0
         private set
 
     val isValid: Boolean
