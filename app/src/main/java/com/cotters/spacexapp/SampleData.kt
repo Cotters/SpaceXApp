@@ -1,5 +1,8 @@
 package com.cotters.spacexapp
 
+import com.cotters.spacexapp.companyinfo.data.response.CompanyInfoDto
+import com.cotters.spacexapp.companyinfo.data.room.CompanyInfo
+import com.cotters.spacexapp.companyinfo.domain.model.CompanyInfoDomainModel
 import com.cotters.spacexapp.launches.data.response.*
 import com.cotters.spacexapp.launches.data.room.Launch
 import com.cotters.spacexapp.launches.data.room.LaunchLinks
@@ -12,8 +15,24 @@ import com.cotters.spacexapp.launches.presentation.model.LaunchDayDifference
 import com.cotters.spacexapp.launches.presentation.model.LaunchStatus
 
 object SampleData {
-    const val companyInfo =
+
+    val companyInfoDto = CompanyInfoDto("SpaceX", "Elon Musk", 2002, 3500, 3, 7500000000, "Summary")
+
+    val companyInfo = CompanyInfo("SpaceX", "Elon Musk", 2002, 3500, 3, 7500000000, "Summary")
+
+    val companyInfoDomain = CompanyInfoDomainModel(
+        name = "SpaceX",
+        founder = "Elon Musk",
+        foundedYear = 2002,
+        employees = 10000,
+        launchSites = 3,
+        valuation = 52000000000L,
+        summary = "SpaceX designs, manufactures and launches advanced rockets and spacecraft. The company was founded in 2002 to revolutionize space technology, with the ultimate goal of enabling people to live on other planets.",
+    )
+
+    const val companyInfoText =
         "SpaceX was founded by Elon Musk in 2002. It has 3500 employees and 3 launch sites. As of 2017 it has a valuation of USD $7,500,000,000."
+
 
     val launches: List<LaunchUiModel> = listOf(
         LaunchUiModel(

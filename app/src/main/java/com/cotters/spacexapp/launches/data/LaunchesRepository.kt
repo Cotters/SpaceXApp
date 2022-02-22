@@ -8,8 +8,7 @@ import com.cotters.spacexapp.launches.data.request.LaunchesRequestBody
 import com.cotters.spacexapp.launches.data.request.LaunchesRequestOptions
 import com.cotters.spacexapp.launches.data.room.Launch
 import com.cotters.spacexapp.launches.domain.LaunchesObjectMapper
-import com.cotters.spacexapp.launches.domain.LaunchesStore
-import com.cotters.spacexapp.service.SpaceXService
+import com.cotters.spacexapp.data.SpaceXService
 import com.cotters.spacexapp.ui.values.Dimensions
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext

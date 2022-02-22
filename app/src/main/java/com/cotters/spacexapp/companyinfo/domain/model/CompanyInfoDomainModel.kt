@@ -1,6 +1,6 @@
 package com.cotters.spacexapp.companyinfo.domain.model
 
-class CompanyInfo(
+class CompanyInfoDomainModel(
     val name: String,
     val founder: String,
     val foundedYear: Int,

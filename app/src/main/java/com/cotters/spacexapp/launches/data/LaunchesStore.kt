@@ -1,4 +1,4 @@
-package com.cotters.spacexapp.launches.domain
+package com.cotters.spacexapp.launches.data
 
 import androidx.paging.PagingSource
 import androidx.room.Query

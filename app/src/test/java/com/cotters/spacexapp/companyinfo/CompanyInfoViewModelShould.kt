@@ -1,15 +1,14 @@
 package com.cotters.spacexapp.companyinfo
 
+import android.content.Context
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
-import com.cotters.spacexapp.companyinfo.domain.model.CompanyInfo
+import com.cotters.spacexapp.R
+import com.cotters.spacexapp.SampleData
 import com.cotters.spacexapp.companyinfo.domain.usecase.GetCompanyInfoUseCase
 import com.cotters.spacexapp.companyinfo.presentation.CompanyInfoViewModel
 import com.cotters.spacexapp.extensions.toDollarString
-import io.mockk.MockKAnnotations
-import io.mockk.coEvery
-import io.mockk.coVerify
+import io.mockk.*
 import io.mockk.impl.annotations.RelaxedMockK
-import io.mockk.mockk
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.TestCoroutineDispatcher
@@ -27,6 +26,9 @@ class CompanyInfoViewModelShould {
     val rule = InstantTaskExecutorRule()
 
     @RelaxedMockK
+    private lateinit var context: Context
+
+    @RelaxedMockK
     private lateinit var getCompanyInfoUseCase: GetCompanyInfoUseCase
 
     private lateinit var viewModel: CompanyInfoViewModel
@@ -35,15 +37,21 @@ class CompanyInfoViewModelShould {
     fun setUp() {
         Dispatchers.setMain(TestCoroutineDispatcher())
         MockKAnnotations.init(this)
+        mockStringResources()
         initViewModel()
     }
 
+    private fun mockStringResources() {
+        every { context.getString(R.string.companyInfoTemplate) } returns companyInfoTemplate
+        every { context.getString(R.string.failedErrorMessage) } returns failedErrorMessage
+    }
+
     private fun initViewModel() {
-        viewModel = CompanyInfoViewModel(mockk(relaxed = true), getCompanyInfoUseCase)
+        viewModel = CompanyInfoViewModel(context, getCompanyInfoUseCase)
     }
 
     @Test
-    fun `fetch company info when view model created`() {
+    fun `fetch company info when view model initialised`() {
         coVerify { getCompanyInfoUseCase.invoke() }
     }
 
@@ -83,14 +91,6 @@ class CompanyInfoViewModelShould {
     companion object {
         const val companyInfoTemplate = "%s was founded by %s in %d. It now has %d employees, %d launch sites, and is valued at USD %s."
         const val failedErrorMessage = "There was a problem retrieving company information."
-        val companyInfoMockData = CompanyInfo(
-            name = "SpaceX",
-            founder = "Elon Musk",
-            foundedYear = 2002,
-            employees = 10000,
-            launchSites = 3,
-            valuation = 52000000000L,
-            summary = "SpaceX designs, manufactures and launches advanced rockets and spacecraft. The company was founded in 2002 to revolutionize space technology, with the ultimate goal of enabling people to live on other planets.",
-        )
+        val companyInfoMockData = SampleData.companyInfoDomain
     }
 }

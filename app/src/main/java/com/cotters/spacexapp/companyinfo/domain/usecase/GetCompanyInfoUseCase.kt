@@ -1,28 +1,12 @@
 package com.cotters.spacexapp.companyinfo.domain.usecase
 
-import com.cotters.spacexapp.service.SpaceXService
-import com.cotters.spacexapp.companyinfo.domain.model.CompanyInfo
+import com.cotters.spacexapp.companyinfo.CompanyInfoMapper
+import com.cotters.spacexapp.companyinfo.data.CompanyInfoRepository
 import javax.inject.Inject
 
-class GetCompanyInfoUseCase @Inject constructor(private val service: SpaceXService) {
-
-    suspend operator fun invoke(): CompanyInfo? {
-        return try {
-            val response = service.fetchCompanyInfo()
-            with(requireNotNull(response.body())) {
-                CompanyInfo(
-                    name = name.orEmpty(),
-                    founder = founder.orEmpty(),
-                    foundedYear = founded ?: 0,
-                    employees = employees ?: 0,
-                    launchSites = launchSites ?: 0,
-                    valuation = valuation ?: 0,
-                    summary = summary.orEmpty()
-                )
-            }
-        } catch (e: Throwable) {
-            null
-        }
-    }
-
+class GetCompanyInfoUseCase @Inject constructor(
+    private val repository: CompanyInfoRepository,
+    private val mapper: CompanyInfoMapper,
+) {
+    suspend operator fun invoke() = repository.getCompanyInfo()?.let(mapper::toDomainModel)
 }

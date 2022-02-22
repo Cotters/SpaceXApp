@@ -1,6 +1,6 @@
 package com.cotters.spacexapp
 
-import com.cotters.spacexapp.service.SpaceXModule
+import com.cotters.spacexapp.data.SpaceXModule
 import kotlinx.coroutines.runBlocking
 import org.hamcrest.CoreMatchers.`is`
 import org.hamcrest.MatcherAssert.assertThat
