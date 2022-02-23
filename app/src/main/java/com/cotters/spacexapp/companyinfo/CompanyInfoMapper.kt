@@ -6,7 +6,7 @@ import com.cotters.spacexapp.companyinfo.domain.model.CompanyInfoDomainModel
 import javax.inject.Inject
 
 class CompanyInfoMapper @Inject constructor() {
-    
+
     fun toStoreModel(companyInfoDto: CompanyInfoDto): CompanyInfo = with(companyInfoDto) {
         return CompanyInfo(
             name = name.orEmpty(),

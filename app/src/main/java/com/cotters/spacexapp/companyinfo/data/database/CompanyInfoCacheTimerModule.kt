@@ -1,4 +1,4 @@
-package com.cotters.spacexapp.data
+package com.cotters.spacexapp.companyinfo.data.database
 
 import dagger.Module
 import dagger.Provides

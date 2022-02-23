@@ -1,11 +1,10 @@
-package com.cotters.spacexapp.launches.data.response
+package com.cotters.spacexapp.data
 
 import com.squareup.moshi.Json
 
 data class PaginationResponse<T>(
     @field:Json(name = "docs") val items: List<T?>?,
     @field:Json(name = "totalDocs") val totalItems: Int?,
-    @field:Json(name = "offset") val offset: Int?,
     @field:Json(name = "limit") val limit: Int?,
     @field:Json(name = "totalPages") val totalPages: Int?,
     @field:Json(name = "page") val page: Int?,
@@ -15,4 +14,3 @@ data class PaginationResponse<T>(
     @field:Json(name = "prevPage") val prevPage: Int?,
     @field:Json(name = "nextPage") val nextPage: Int?,
 )
-

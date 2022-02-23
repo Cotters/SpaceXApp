@@ -14,7 +14,7 @@ class LaunchesStore @Inject constructor(
         launchesDao.insertAll(launches)
     }
 
-    fun pagingSource(): PagingSource<Int, Launch> = launchesDao.pagingSource()
+    fun pagingSource() = launchesDao.pagingSource()
 
     fun lastUpdated() = 0 // TODO: Store in SharedPreferences
 }

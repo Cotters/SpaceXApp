@@ -4,7 +4,7 @@ import com.cotters.spacexapp.SampleData
 import com.cotters.spacexapp.companyinfo.data.CompanyInfoRepository
 import com.cotters.spacexapp.companyinfo.data.CompanyInfoStore
 import com.cotters.spacexapp.companyinfo.data.database.CompanyInfo
-import com.cotters.spacexapp.data.CompanyInfoCacheTimer
+import com.cotters.spacexapp.companyinfo.data.database.CompanyInfoCacheTimer
 import com.cotters.spacexapp.data.SpaceXService
 import io.mockk.*
 import io.mockk.impl.annotations.RelaxedMockK
