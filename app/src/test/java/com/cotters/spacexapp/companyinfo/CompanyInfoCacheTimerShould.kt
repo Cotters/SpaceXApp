@@ -1,5 +1,7 @@
-package com.cotters.spacexapp.data
+package com.cotters.spacexapp.companyinfo
 
+import com.cotters.spacexapp.data.CompanyInfoCacheTimer
+import com.cotters.spacexapp.data.SystemClock
 import io.mockk.MockKAnnotations
 import io.mockk.every
 import io.mockk.impl.annotations.RelaxedMockK

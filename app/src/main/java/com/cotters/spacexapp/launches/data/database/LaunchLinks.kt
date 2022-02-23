@@ -1,4 +1,4 @@
-package com.cotters.spacexapp.launches.data.room
+package com.cotters.spacexapp.launches.data.database
 
 data class LaunchLinks(
     val patchImageUrl: String?,

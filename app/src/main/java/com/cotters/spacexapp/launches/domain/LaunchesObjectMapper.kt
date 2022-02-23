@@ -3,9 +3,9 @@ package com.cotters.spacexapp.launches.domain
 import androidx.paging.PagingData
 import androidx.paging.map
 import com.cotters.spacexapp.launches.data.response.LaunchDto
-import com.cotters.spacexapp.launches.data.room.Launch
-import com.cotters.spacexapp.launches.data.room.LaunchLinks
-import com.cotters.spacexapp.launches.data.room.Rocket
+import com.cotters.spacexapp.launches.data.database.Launch
+import com.cotters.spacexapp.launches.data.database.LaunchLinks
+import com.cotters.spacexapp.launches.data.database.Rocket
 import com.cotters.spacexapp.launches.domain.model.LaunchDomainModel
 import com.cotters.spacexapp.launches.domain.model.LaunchLinksDomainModel
 import com.cotters.spacexapp.launches.domain.model.RocketDomainModel

@@ -1,7 +1,7 @@
 package com.cotters.spacexapp.companyinfo
 
 import com.cotters.spacexapp.companyinfo.data.response.CompanyInfoDto
-import com.cotters.spacexapp.companyinfo.data.room.CompanyInfo
+import com.cotters.spacexapp.companyinfo.data.database.CompanyInfo
 import com.cotters.spacexapp.companyinfo.domain.model.CompanyInfoDomainModel
 
 class CompanyInfoMapper {

@@ -1,4 +1,4 @@
-package com.cotters.spacexapp.launches.data.room
+package com.cotters.spacexapp.launches.data.database
 
 import androidx.paging.PagingSource
 import androidx.room.Dao

@@ -1,12 +1,12 @@
 package com.cotters.spacexapp
 
 import com.cotters.spacexapp.companyinfo.data.response.CompanyInfoDto
-import com.cotters.spacexapp.companyinfo.data.room.CompanyInfo
+import com.cotters.spacexapp.companyinfo.data.database.CompanyInfo
 import com.cotters.spacexapp.companyinfo.domain.model.CompanyInfoDomainModel
 import com.cotters.spacexapp.launches.data.response.*
-import com.cotters.spacexapp.launches.data.room.Launch
-import com.cotters.spacexapp.launches.data.room.LaunchLinks
-import com.cotters.spacexapp.launches.data.room.Rocket
+import com.cotters.spacexapp.launches.data.database.Launch
+import com.cotters.spacexapp.launches.data.database.LaunchLinks
+import com.cotters.spacexapp.launches.data.database.Rocket
 import com.cotters.spacexapp.launches.domain.model.LaunchDomainModel
 import com.cotters.spacexapp.launches.domain.model.LaunchLinksDomainModel
 import com.cotters.spacexapp.launches.domain.model.RocketDomainModel

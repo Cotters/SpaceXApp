@@ -1,4 +1,4 @@
-package com.cotters.spacexapp.companyinfo.data.room
+package com.cotters.spacexapp.companyinfo.data.database
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

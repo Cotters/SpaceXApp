@@ -1,7 +1,7 @@
 package com.cotters.spacexapp.companyinfo.data
 
-import com.cotters.spacexapp.companyinfo.data.room.CompanyInfo
-import com.cotters.spacexapp.companyinfo.data.room.CompanyInfoDao
+import com.cotters.spacexapp.companyinfo.data.database.CompanyInfo
+import com.cotters.spacexapp.companyinfo.data.database.CompanyInfoDao
 import javax.inject.Inject
 
 class CompanyInfoStore @Inject constructor(

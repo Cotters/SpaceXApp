@@ -1,11 +1,9 @@
-package com.cotters.spacexapp.launches.data.room
+package com.cotters.spacexapp.launches.data.database
 
 import androidx.room.ColumnInfo
 import androidx.room.Embedded
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import java.util.*
-import kotlin.random.Random
 
 @Entity(tableName = "launches")
 data class Launch(

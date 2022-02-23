@@ -2,8 +2,8 @@ package com.cotters.spacexapp.data
 
 import android.content.Context
 import androidx.room.Room
-import com.cotters.spacexapp.companyinfo.data.room.CompanyInfoDao
-import com.cotters.spacexapp.launches.data.room.LaunchesDao
+import com.cotters.spacexapp.companyinfo.data.database.CompanyInfoDao
+import com.cotters.spacexapp.launches.data.database.LaunchesDao
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

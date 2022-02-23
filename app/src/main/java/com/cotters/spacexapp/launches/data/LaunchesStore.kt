@@ -1,10 +1,8 @@
 package com.cotters.spacexapp.launches.data
 
 import androidx.paging.PagingSource
-import androidx.room.Query
-import com.cotters.spacexapp.launches.data.room.Launch
-import com.cotters.spacexapp.launches.data.room.LaunchesDao
-import kotlinx.coroutines.flow.Flow
+import com.cotters.spacexapp.launches.data.database.Launch
+import com.cotters.spacexapp.launches.data.database.LaunchesDao
 import javax.inject.Inject
 
 

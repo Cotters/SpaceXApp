@@ -2,7 +2,7 @@ package com.cotters.spacexapp.companyinfo.data
 
 import com.cotters.spacexapp.companyinfo.CompanyInfoMapper
 import com.cotters.spacexapp.companyinfo.data.response.CompanyInfoDto
-import com.cotters.spacexapp.companyinfo.data.room.CompanyInfo
+import com.cotters.spacexapp.companyinfo.data.database.CompanyInfo
 import com.cotters.spacexapp.data.CompanyInfoCacheTimer
 import com.cotters.spacexapp.data.SpaceXService
 import kotlinx.coroutines.Dispatchers
