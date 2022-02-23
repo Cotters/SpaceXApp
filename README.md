@@ -9,7 +9,7 @@ All data is taken from [this API](https://github.com/r-spacex/SpaceX-API/) and s
 * Sort launches by date in ascending or descending order.
 * Filter launches to show only launches that have failed or succeeeded.
 * Filter launches by year.
-* Open web links (Wikipedia/press/YouTube) and open when tapped.
+* Show web links (Wikipedia/press/YouTube) and open when tapped.
 * All fetched data is stored locally.
 
 
