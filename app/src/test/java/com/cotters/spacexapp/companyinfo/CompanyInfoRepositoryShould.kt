@@ -136,7 +136,7 @@ class CompanyInfoRepositoryShould {
     }
 
     private fun mockStoredCompanyInfo() {
-        coEvery { store.getCompanyInfo() } returns companyInfo
+        coEvery { store.get() } returns companyInfo
     }
 
     companion object {

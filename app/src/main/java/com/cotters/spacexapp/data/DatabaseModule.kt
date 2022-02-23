@@ -2,6 +2,7 @@ package com.cotters.spacexapp.data
 
 import android.content.Context
 import androidx.room.Room
+import com.cotters.spacexapp.companyinfo.data.room.CompanyInfoDao
 import com.cotters.spacexapp.launches.data.room.LaunchesDao
 import dagger.Module
 import dagger.Provides
@@ -21,6 +22,11 @@ class DatabaseModule {
             appContext,
             SpaceXDatabase::class.java, "SpaceXApp.db"
         ).build()
+    }
+
+    @Provides
+    fun provideCompanyInfoDao(database: SpaceXDatabase): CompanyInfoDao {
+        return database.companyInfoDao()
     }
 
     @Provides

@@ -4,11 +4,15 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.cotters.spacexapp.companyinfo.data.room.CompanyInfo
+import com.cotters.spacexapp.companyinfo.data.room.CompanyInfoDao
 import com.cotters.spacexapp.launches.data.room.Launch
 import com.cotters.spacexapp.launches.data.room.LaunchesDao
 
-@Database(version = 1, entities = [Launch::class])
+@Database(version = 1, entities = [CompanyInfo::class, Launch::class])
 abstract class SpaceXDatabase : RoomDatabase() {
+
+    abstract fun companyInfoDao(): CompanyInfoDao
 
     abstract fun launchesDao(): LaunchesDao
 

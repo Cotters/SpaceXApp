@@ -5,6 +5,8 @@ import com.cotters.spacexapp.companyinfo.data.response.CompanyInfoDto
 import com.cotters.spacexapp.companyinfo.data.room.CompanyInfo
 import com.cotters.spacexapp.data.CompanyInfoCacheTimer
 import com.cotters.spacexapp.data.SpaceXService
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 import retrofit2.Response
 import javax.inject.Inject
 
@@ -15,8 +17,8 @@ class CompanyInfoRepository @Inject constructor(
     private val cacheTimer: CompanyInfoCacheTimer,
 ) {
 
-    suspend fun getCompanyInfo(): CompanyInfo? {
-        return try {
+    suspend fun getCompanyInfo(): CompanyInfo? = withContext(Dispatchers.IO) {
+        try {
             if (cacheTimer.shouldRequestCompanyInfo()) {
                 val response = fetchCompanyInfo()
                 val data = requireNotNull(response.body())
@@ -25,11 +27,11 @@ class CompanyInfoRepository @Inject constructor(
                 cacheTimer.reset()
                 companyInfo
             } else {
-                store.getCompanyInfo()
+                store.get()
             }
         } catch (e: Exception) {
             cacheTimer.invalidate()
-            store.getCompanyInfo()
+            store.get()
         }
     }
 
