@@ -9,6 +9,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.cotters.spacexapp.SampleData
 import com.cotters.spacexapp.ui.theme.SpaceXAppTheme
 
 
@@ -29,6 +30,6 @@ fun CompanyInfoCard(companyInfo: String) = Card(
 @Composable
 private fun PreviewCompanyInfoCard() {
     SpaceXAppTheme {
-        CompanyInfoCard(companyInfo = "SpaceX is a company founded by Elon Musk in 2002.")
+        CompanyInfoCard(companyInfo = SampleData.companyInfoText)
     }
 }
